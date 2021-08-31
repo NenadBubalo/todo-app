@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+/*
+font-family: 'Josefin Sans', sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor: hsl(235, 21%, 11%); /*Very Dark Blue*/
+    --backgroundColorLight: hsl(235, 24%, 19%); /*Very Dark Desaturated Blue*/
+    --fontColor: hsl(234, 39%, 85%); /*Light Grayish Blue*/
+    --fontColorHover: hsl(236, 33%, 92%); /*Light Grayish Blue :hover*/
+    --fontColor2: hsl(234, 11%, 52%); /*Dark Grayish Blue*/
+    --fontColorDone: hsl(233, 14%, 35%); /*Very Dark Grayish Blue*/
+    --divColor: hsl(237, 14%, 26%); /*Very Dark Grayish Blue2*/
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--backgroundColor), var(--backgroundColorLight));
+    position: relative;
+}
+
+.body__img {
+    width: 100%;
+    height: auto;
+    padding-top: 1.5rem;
+    z-index: 1;
+}
+
+.container {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body__textIconContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2rem;
+}
+
+.body__textIconContainer-text {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    color: var(--fontColor);
+    letter-spacing: 0.5em;
+}
+
+.body__textIconContainer-icon {
+    width: 4%;
+    height: 4%;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.body__textIconContainer-icon:hover {
+    cursor: pointer;
+}
+
+.body__InputContainer,
+.body__outputContainer {
+    width: 100%;
+}
+
+.body__InputContainer-form,
+.body__outputContainer-form {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.body__InputContainer-form-div,
+.body__outputContainer-form-div {
+    display: flex;
+    width: 10%;
+    height: 8vh;
+    background-color: var(--divColor);
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.body__InputContainer-form-div-radioButton,
+.body__outputContainer-form-div-radioButton {
+    width: 35%;
+    height: 40%;
+    border-radius: 100em;
+    border-style: solid;
+    border-color: var(--fontColorDone);
+    background-color: var(--divColor);
+    cursor: pointer;
+
+}
+
+.body__InputContainer-form-input,
+.body__outputContainer-form-output {
+    width: 90%;
+    height: 8vh;
+    background-color: var(--divColor);
+    border: none;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--fontColor2);
+    font-size: 1rem;
+}
+
+.body__InputContainer {
+    padding-bottom: 2rem;
+}
+
+.body__outputContainer-form {
+    border-bottom: solid;
+    border-width: thin;
+    border-color: var(--fontColorDone);
+}
+
+.body__infoContainer {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.body__infoContainer-output,
+.body__infoContainer-p-center,
+.body__infoContainer-p-right {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--fontColor2);
+    font-size: 0.7rem;
+}
+
