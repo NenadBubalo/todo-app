@@ -15,9 +15,23 @@ font-family: 'Josefin Sans', sans-serif;
     --fontColor: hsl(234, 39%, 85%); /*Light Grayish Blue*/
     --fontColorHover: hsl(236, 33%, 92%); /*Light Grayish Blue :hover*/
     --fontColor2: hsl(234, 11%, 52%); /*Dark Grayish Blue*/
-    --fontColorDone: hsl(233, 14%, 35%); /*Very Dark Grayish Blue*/
+    --borderColor: hsl(233, 14%, 35%); /*Very Dark Grayish Blue*/
     --divColor: hsl(237, 14%, 26%); /*Very Dark Grayish Blue2*/
     --borderColorHover: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --fontActive: ;
+    --fontOutput: ;
+}
+
+.light-theme {
+    --backgroundColor: hsl(0, 0%, 98%); /*Very Light Gray*/
+    --divColor: hsl(236, 33%, 92%); /*Very Light Grayish Blue*/
+    --fontColor: hsl(233, 11%, 84%); /*Light Grayish Blue*/
+    --fontColor2: hsl(236, 9%, 61%); /*Dark Grayish Blue*/
+    --borderColor: hsl(235, 19%, 35%); /*Very Dark Grayish Blue*/
+    --borderColorHover: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --fontColorHover: hsl(237, 14%, 26%); /*Very Dark Grayish Blue2*/
+    --fontActive: ;
+    --fontOutput: ;
 }
 
 body {
@@ -98,7 +112,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 100em;
-    background-color: var(--fontColorDone);
+    background-color: var(--borderColor);
 }
 
 .button-border-div:hover {
@@ -133,7 +147,7 @@ body {
 .body__outputContainer-form {
     border-bottom: solid;
     border-width: thin;
-    border-color: var(--fontColorDone);
+    border-color: var(--borderColor);
 }
 
 .body__infoContainer {
