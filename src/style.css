@@ -17,6 +17,7 @@ font-family: 'Josefin Sans', sans-serif;
     --fontColor2: hsl(234, 11%, 52%); /*Dark Grayish Blue*/
     --fontColorDone: hsl(233, 14%, 35%); /*Very Dark Grayish Blue*/
     --divColor: hsl(237, 14%, 26%); /*Very Dark Grayish Blue2*/
+    --borderColorHover: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
 body {
@@ -64,9 +65,6 @@ body {
     height: 4%;
     margin-right: 0;
     margin-left: auto;
-}
-
-.body__textIconContainer-icon:hover {
     cursor: pointer;
 }
 
@@ -102,7 +100,6 @@ body {
     border-color: var(--fontColorDone);
     background-color: var(--divColor);
     cursor: pointer;
-
 }
 
 .body__InputContainer-form-input,
@@ -143,7 +140,16 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     color: var(--fontColor2);
     font-size: 0.8rem;
+}
+
+.body__infoContainer-p-center,
+.body__infoContainer-p-right {
     cursor: pointer;
+}
+
+.body__infoContainer-p-center:hover,
+.body__infoContainer-p-right:hover {
+    color: var(--fontColorHover);
 }
 
 .body__infoContainer-p-right {
