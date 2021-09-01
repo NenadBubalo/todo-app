@@ -17,7 +17,7 @@ font-family: 'Josefin Sans', sans-serif;
     --fontColor2: hsl(234, 11%, 52%); /*Dark Grayish Blue*/
     --fontColorDone: hsl(233, 14%, 35%); /*Very Dark Grayish Blue*/
     --divColor: hsl(237, 14%, 26%); /*Very Dark Grayish Blue2*/
-    --borderColorHover: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --borderColorHover: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
 body {
@@ -91,13 +91,26 @@ body {
     justify-content: center;
 }
 
-.body__InputContainer-form-div-radioButton,
-.body__outputContainer-form-div-radioButton {
+.button-border-div {
     width: 35%;
     height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 100em;
-    border-style: solid;
-    border-color: var(--fontColorDone);
+    background-color: var(--fontColorDone);
+}
+
+.button-border-div:hover {
+    background: var(--borderColorHover);
+}
+
+.body__InputContainer-form-div-radioButton,
+.body__outputContainer-form-div-radioButton {
+    width: 85%;
+    height: 90%;
+    border-radius: 100em;
+    border-style: none;
     background-color: var(--divColor);
     cursor: pointer;
 }
