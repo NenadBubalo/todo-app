@@ -29,7 +29,7 @@ icon.onclick = function () {
     }
 }
 
-//ändert die farbe beim klicken auf dem button
+//changes the color when clicking on the button
 function changeColorButton () {
     if(this.style.background === "var(--borderColorHover)") {
         this.style.background = "var(--divColor)";
@@ -39,7 +39,7 @@ function changeColorButton () {
     }
 }
 
-//ändert die farbe beim klicken auf den info text
+//changes the color when clicking on the info text
 function changeColorText () {
     if(this.style.color === "var(--fontActive)") {
         this.style.color = "var(--fontColor2)";
@@ -49,9 +49,8 @@ function changeColorText () {
     }
 }
 
-//todos hinzufügen
+//add todos
 addButton.addEventListener("click", function () {
-    var number = 1;
     var paragraph = document.createElement('p');
     paragraph.innerText = newTodo.value;
     if (output1.hasChildNodes() === false) {
@@ -79,13 +78,25 @@ addButton.addEventListener("click", function () {
         newTodo.value = " ";
     }
     else {
-        alert("Kein Platz! Bitte löschen Sie ein Todo.");
+        alert("Please delete a todo!");
     }
 
 })
 
+function textTrough (button, text) {
+    button.addEventListener('click', function () {
+        if(button.style.background === "var(--divColor)") {
+            text.style.textDecoration = 'none';
+        }
+        else {
+            text.style.textDecoration = 'line-through';
+        }
+    })
+
+}
 
 radioButton1.onclick = changeColorButton;
+textTrough(radioButton1, output1);
 radioButton2.onclick = changeColorButton;
 radioButton3.onclick = changeColorButton;
 radioButton4.onclick = changeColorButton;
