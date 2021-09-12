@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todo-app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="images/bg-desktop-dark.jpg" class="body__img" alt="desktop-dark-img">
+    <div class="container">
+    <div class="body__textIconContainer">
+        <h1 class="body__textIconContainer-text">todo</h1>
+        <img src="images/icon-sun.svg" class="body__textIconContainer-icon" alt="sun-icon" id="icon">
+    </div>
+    <div class="body__InputContainer">
+        <div class="body__InputContainer-form" id="setText">
+            <div class="body__InputContainer-form-div" id="buttonClick-container">
+                <div class="button-border-div">
+                    <button class="body__InputContainer-form-div-radioButton" id="addButton"><p class="buttonInherit">+</p></button>
+                    <!--<input type="button" form="buttonClick-container" class="body__InputContainer-form-div-radioButton" id="buttonClick">-->
+                </div>
+            </div>
+            <input type="text" class="body__InputContainer-form-input"
+            placeholder="Create a new todo..." id="newTodo">
+        </div>
+    </div>
+    <div class="body__outputContainer">
+        <!--outputContainer1-->
+        <form class="body__outputContainer-form">
+            <div class="body__outputContainer-form-div">
+                <div class="button-border-div"><input type="button" class="body__outputContainer-form-div-radioButton" id="radioButton1"></div>
+            </div>
+            <div class="body__outputContainer-form-output" id="output1"></div>
+        </form>
+        <!--outputContainer2-->
+        <form class="body__outputContainer-form">
+            <div class="body__outputContainer-form-div">
+                <div class="button-border-div"><input type="button" class="body__outputContainer-form-div-radioButton" id="radioButton2"></div>
+            </div>
+            <div class="body__outputContainer-form-output" id="output2"></div>
+        </form>
+        <!--outputContainer3-->
+        <form class="body__outputContainer-form">
+            <div class="body__outputContainer-form-div">
+                <div class="button-border-div"><input type="button" class="body__outputContainer-form-div-radioButton" id="radioButton3"></div>
+            </div>
+            <div class="body__outputContainer-form-output" id="output3"></div>
+        </form>
+        <!--outputContainer4-->
+        <form class="body__outputContainer-form">
+            <div class="body__outputContainer-form-div">
+                <div class="button-border-div"><input type="button" class="body__outputContainer-form-div-radioButton" id="radioButton4"></div>
+            </div>
+            <div class="body__outputContainer-form-output" id="output4"></div>
+        </form>
+        <!--outputContainer5-->
+        <form class="body__outputContainer-form">
+            <div class="body__outputContainer-form-div">
+                <div class="button-border-div"><input type="button" class="body__outputContainer-form-div-radioButton" id="radioButton5"></div>
+            </div>
+            <div class="body__outputContainer-form-output" id="output5"></div>
+        </form>
+        <!--outputContainer6-->
+        <form class="body__outputContainer-form">
+            <div class="body__outputContainer-form-div">
+                <div class="button-border-div"><input type="button" class="body__outputContainer-form-div-radioButton" id="radioButton6"></div>
+            </div>
+            <div class="body__outputContainer-form-output" id="output6"></div>
+        </form>
+    </div>
+    <div class="body__infoContainer" onmouseover="hover">
+        <div class="body__infoContainer-output"> item left</div>
+        <p class="body__infoContainer-p-center" id="infoContainerAll">All</p>
+        <p class="body__infoContainer-p-center" id="infoContainerActive">Active</p>
+        <p class="body__infoContainer-p-center" id="infoContainerCompleted">Completed</p>
+        <p class="body__infoContainer-p-right" id="infoContainerClear">Clear Completed</p>
+
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -18,20 +18,21 @@ font-family: 'Josefin Sans', sans-serif;
     --borderColor: hsl(233, 14%, 35%); /*Very Dark Grayish Blue*/
     --divColor: hsl(237, 14%, 26%); /*Very Dark Grayish Blue2*/
     --borderColorHover: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    --fontActive: ;
-    --fontOutput: ;
+    --fontActive: #107AE3;
+    --fontOutput: hsl(234, 39%, 85%);
 }
 
 .light-theme {
     --backgroundColor: hsl(0, 0%, 98%); /*Very Light Gray*/
+    --backgroundColorLight: hsl(236, 33%, 93%);
     --divColor: hsl(236, 33%, 92%); /*Very Light Grayish Blue*/
     --fontColor: hsl(233, 11%, 84%); /*Light Grayish Blue*/
     --fontColor2: hsl(236, 9%, 61%); /*Dark Grayish Blue*/
     --borderColor: hsl(235, 19%, 35%); /*Very Dark Grayish Blue*/
     --borderColorHover: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     --fontColorHover: hsl(237, 14%, 26%); /*Very Dark Grayish Blue2*/
-    --fontActive: ;
-    --fontOutput: ;
+    --fontActive: #183D62;
+    --fontOutput: hsl(235, 24%, 19%);
 }
 
 body {
@@ -85,13 +86,13 @@ body {
 .body__InputContainer,
 .body__outputContainer {
     width: 100%;
+
 }
 
 .body__InputContainer-form,
 .body__outputContainer-form {
     display: flex;
     flex-direction: row;
-    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .body__InputContainer-form-div,
@@ -119,13 +120,20 @@ body {
     background: var(--borderColorHover);
 }
 
+.buttonInherit {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: var(--fontOutput);
+}
+
 .body__InputContainer-form-div-radioButton,
 .body__outputContainer-form-div-radioButton {
     width: 85%;
     height: 90%;
     border-radius: 100em;
     border-style: none;
-    background-color: var(--divColor);
+    background: var(--divColor);
     cursor: pointer;
 }
 
@@ -138,6 +146,13 @@ body {
     font-family: "Josefin Sans", sans-serif;
     color: var(--fontColor2);
     font-size: 1rem;
+}
+
+.body__outputContainer-form-output {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
 }
 
 .body__InputContainer {
@@ -172,11 +187,6 @@ body {
 .body__infoContainer-p-center,
 .body__infoContainer-p-right {
     cursor: pointer;
-}
-
-.body__infoContainer-p-center:hover,
-.body__infoContainer-p-right:hover {
-    color: var(--fontColorHover);
 }
 
 .body__infoContainer-p-right {
