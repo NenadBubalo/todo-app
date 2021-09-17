@@ -35,6 +35,11 @@ font-family: 'Josefin Sans', sans-serif;
     --fontOutput: hsl(235, 24%, 19%);
 }
 
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     width: 100vw;
     height: auto;
@@ -45,7 +50,7 @@ body {
 .body__img {
     width: 100%;
     height: auto;
-    padding-top: 1.5rem;
+    padding-top: 0;
     z-index: 1;
 }
 
@@ -188,6 +193,11 @@ body {
 .body__infoContainer-p-center,
 .body__infoContainer-p-right {
     cursor: pointer;
+}
+
+.body__infoContainer-p-center:hover,
+.body__infoContainer-p-right:hover {
+    color: var(--fontColorHover);
 }
 
 .body__infoContainer-p-right {

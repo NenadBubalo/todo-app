@@ -1,4 +1,8 @@
-
+class Start {
+    constructor() {
+        document.getElementById('counterDiv').innerHTML = '0 items left';
+    }
+}
 let icon = document.getElementById("icon");
 let radioButton1 = document.getElementById("radioButton1");
 let radioButton2 = document.getElementById("radioButton2");
@@ -147,7 +151,7 @@ function showAll (text) {
 }
 
 
-
+const start = new Start();
 
 radioButton1.onclick = changeColorButton;
 textTrough(radioButton1, output1);
