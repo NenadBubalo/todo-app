@@ -214,5 +214,57 @@ body {
     margin-left: 1rem;
 }
 
+/** 1200px oder schmaler */
+@media (max-width: 75em) {
+    .body__InputContainer-form-div,
+    .body__InputContainer-form-input,
+    .body__outputContainer-form-div,
+    .body__outputContainer-form-output {
+        height: 4vh;
+    }
+
+    .button-border-div {
+        height: 30%;
+    }
+}
+
+/** 768px oder schmaler */
+@media (max-width: 48em) {
+    .body__infoContainer-output,
+    .body__infoContainer-p-center,
+    .body__infoContainer-p-right {
+        font-size: 0.5rem;
+    }
+
+    .button-border-div {
+        width: 40%;
+        height: 25%;
+
+    }
+}
+/** 576px oder schmaler */
+@media (max-width: 36em) {
+    .body__infoContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .body__infoContainer-output,
+    .body__infoContainer-p-center,
+    .body__infoContainer-p-right {
+        font-size: 0.6rem;
+        margin: 0;
+        padding: 0.2rem;
+    }
+
+    .button-border-div {
+        width: 50%;
+        height: 25%;
+    }
+}
+
+
 
 
