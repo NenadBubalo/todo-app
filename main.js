@@ -20,7 +20,8 @@ let output5 = document.getElementById("output5");
 let output6 = document.getElementById("output6");
 
 let clear = document.getElementById('infoContainerClear');
-
+let counterDiv = document.getElementById('counterDiv');
+let containerCount = 0;
 
 icon.onclick = function () {
     document.body.classList.toggle("light-theme");
@@ -42,20 +43,12 @@ function changeColorButton () {
     }
 }
 
-//changes the color when clicking on the info text
-function changeColorText () {
-    if(this.style.color === "var(--fontActive)") {
-        this.style.color = "var(--fontColor2)";
-    }
-    else {
-        this.style.color = "var(--fontActive)";
-    }
-}
-
-//add todos
+//add todos; item left plus
     addButton.addEventListener("click", function () {
         var paragraph = document.createElement('p');
         paragraph.innerText = newTodo.value;
+        containerCount++;
+        counterDiv.innerText = containerCount + ' item left';
         if (output1.hasChildNodes() === false) {
             output1.appendChild(paragraph);
             newTodo.value = " ";
@@ -81,7 +74,7 @@ function changeColorText () {
     })
 
 
-//click to cross out the text
+//click to cross out the text; item left minus
 function textTrough (button, text) {
     button.addEventListener('click', function () {
         if(button.style.background === "var(--divColor)") {
@@ -89,6 +82,8 @@ function textTrough (button, text) {
         }
         else {
             text.style.textDecoration = 'line-through';
+            containerCount--;
+            counterDiv.innerText = containerCount + ' item left';
         }
     })
 
@@ -105,6 +100,54 @@ function clearCompleted (text, button) {
     })
 }
 
+//show all Completed
+function showCompleted (text) {
+    infoContainerCompleted.addEventListener('click', function () {
+        infoContainerCompleted.style.color = "var(--fontActive)";
+        infoContainerActive.style.color = "var(--fontColor2)";
+        infoContainerAll.style.color = "var(--fontColor2)";
+        if(text.style.textDecoration === 'line-through') {
+            text.style.color = 'var(--fontColor2)';
+        }
+        else {
+            text.style.color = 'var(--divColor)';
+        }
+    })
+}
+
+//show all Active
+function showActive (text) {
+    infoContainerActive.addEventListener('click', function () {
+        infoContainerActive.style.color = 'var(--fontActive)';
+        infoContainerCompleted.style.color = 'var(--fontColor2)';
+        infoContainerAll.style.color = 'var(--fontColor2)';
+        if(text.style.textDecoration === 'line-through') {
+            text.style.color = 'var(--divColor)';
+        }
+        else {
+            text.style.color = 'var(--fontColor2)';
+        }
+    })
+}
+
+//show All
+function showAll (text) {
+    infoContainerAll.addEventListener('click', function () {
+        infoContainerAll.style.color = 'var(--fontActive)';
+        infoContainerCompleted.style.color = 'var(--fontColor2)';
+        infoContainerActive.style.color = 'var(--fontColor2)';
+        if(text.style.textDecoration === 'line-through') {
+            text.style.color = 'var(--fontColor2)';
+        }
+        else {
+            text.style.color = 'var(--fontColor2)';
+        }
+    })
+
+}
+
+
+
 
 radioButton1.onclick = changeColorButton;
 textTrough(radioButton1, output1);
@@ -119,16 +162,34 @@ textTrough(radioButton5, output5);
 radioButton6.onclick = changeColorButton;
 textTrough(radioButton6, output6);
 
-infoContainerAll.onclick = changeColorText;
-infoContainerActive.onclick = changeColorText;
-infoContainerCompleted.onclick = changeColorText;
-
 clearCompleted(output1, radioButton1);
 clearCompleted(output2, radioButton2);
 clearCompleted(output3, radioButton3);
 clearCompleted(output4, radioButton4);
 clearCompleted(output5, radioButton5);
 clearCompleted(output6, radioButton6);
+
+showCompleted(output1);
+showCompleted(output2);
+showCompleted(output3);
+showCompleted(output4);
+showCompleted(output5);
+showCompleted(output6);
+
+showActive(output1);
+showActive(output2);
+showActive(output3);
+showActive(output4);
+showActive(output5);
+showActive(output6);
+
+showAll(output1);
+showAll(output2);
+showAll(output3);
+showAll(output4);
+showAll(output5);
+showAll(output6);
+
 
 
 
